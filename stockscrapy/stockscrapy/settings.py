@@ -1,3 +1,4 @@
+import os
 # Scrapy settings for stockscrapy project
 #
 # For simplicity, this file contains only settings considered important or
@@ -62,7 +63,7 @@ DOWNLOADER_MIDDLEWARES = {
       'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
 
-SPLASH_URL = 'http://localhost:8050'
+SPLASH_URL = 'http://localhost:8050' #os.getenv('SPLASH_URL')
 
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
