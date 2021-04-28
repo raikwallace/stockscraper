@@ -63,7 +63,8 @@ DOWNLOADER_MIDDLEWARES = {
       'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
 
-SPLASH_URL = 'http://localhost:8050' #os.getenv('SPLASH_URL')
+SPLASH_URL = os.getenv('SPLASH_URL')
+# SPLASH_URL = 'http://localhost:8050' 
 
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
